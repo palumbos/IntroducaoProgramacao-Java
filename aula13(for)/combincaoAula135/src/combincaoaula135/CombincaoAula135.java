@@ -29,16 +29,14 @@ public static Scanner input = new Scanner(System.in);
            System.out.print("digite quantos elementos serao agrupados por combinacao: ");
                    p = Integer.parseInt(input.nextLine());
          
-           combinacao = (caucularFatorial(n)/(caucularFatorial((n - p)) * caucularFatorial(p)));
+            combinacao = (caucularFatorial(n)/(caucularFatorial((n - p)) * caucularFatorial(p)));
            
+            System.out.println(combinacao);          
+            
             System.out.print("digite se deseja continuar(s para continuar e n para nao continuar):  ");
                   char comando = input.nextLine().charAt(0);
                   
                   continuar = !(comando == 'n' || comando == 'N');
-             
-  
-         
-         System.out.println(combinacao);
         }
     } 
     

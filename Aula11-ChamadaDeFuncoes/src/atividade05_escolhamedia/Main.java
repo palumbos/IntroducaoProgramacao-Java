@@ -32,7 +32,9 @@ public class Main {
          
          System.out.print("digite o tipo de media que voce quer(A parar Artimética,"
                  + " P para Ponderada e G parar geometrica:");   
-         return input.nextLine().charAt(0);
+         char x = input.nextLine().charAt(0);
+         char y = Character.toUpperCase(x); // pra caso o usuario digite minusculo
+         return y;
     }
     
     public static Integer cauculeMedia(float nota1, float nota2, float nota3, char tipoMedia, int media){

@@ -1,19 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
+
 package desafio01_array_precoordemcrescente;
 
-/**
- *
- * @author alunolages
- */
-public class Main {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class Main {
+    static Scanner input = new Scanner(System.in);
+
     public static void main(String args[]) {
-        // TODO code application logic here
+        int produtos;
+        
+        System.out.println("digite quantos produtos tem em sua loja: ");
+        produtos = input.nextInt();
+        
+        float[] preco = new float[produtos];
+        float[] crescente = new float[produtos];
+        
+        for(int i = 0; i < 0; i ++){
+            System.out.println("digite o preço do produto"+(i+1));
+            preco[i] = input.nextFloat();  
+        }
+        
+        for(int i = 0; i < 0; i ++){
+            
+        }
     }
 }

@@ -64,9 +64,9 @@ public class Prova3Ex2 {
 
     public static void printarResultado(String[] alunos, float[] mediaIndiv, float[] mediaTotal) {
         int aprovados = 0;
-        float percentual, maior = 0;
+        float percentual, maior = mediaIndiv[0];
         for (int i = 0; i < alunos.length; i++) {
-            System.out.println("O aluno " + alunos[i] + " teve a media final de: " + mediaIndiv[i]);
+            System.out.println("\n\n\nO aluno " + alunos[i] + " teve a media final de: " + mediaIndiv[i]);
             if (mediaIndiv[i] >= 6) {
                 System.out.println("Pela media ser maior ou igual a 6, o aluno foi APROVADO!!!");
             } else if (mediaIndiv[i] >= 3) {
@@ -78,15 +78,15 @@ public class Prova3Ex2 {
                 aprovados++;
             }
         }
-        percentual = (int) (aprovados / alunos.length) * 100; //transformei em int para aparecer o percentual so com a parte inteira
+        percentual = aprovados * 100f / alunos.length; //transformei em int para aparecer o percentual so com a parte inteira
         System.out.println("\n a quantidade de alunos aprovados foi de " + aprovados + " e o percentual de aprovação foi " + percentual);
         
         for ( int i = 0; i < 5; i++){
-            System.out.println("a media final da avaliação "+(i+1)+"foi: "+mediaTotal);
+            System.out.println("a media final da avaliação "+(i+1)+" foi: "+mediaTotal[i]);
         }
         
         for (int i = 0; i < alunos.length; i++) {
-            if(maior > mediaIndiv[i]){
+            if(maior < mediaIndiv[i]){
             maior = mediaIndiv[i];
             }
             

@@ -11,7 +11,7 @@ public class Prova3Ex1 {
 
         System.out.print("Digite quantos Alunos estão Matriculados em Introdução a Programação: ");
         quantProg = Integer.parseInt(input.nextLine());
-        if (quantProg < 0 || quantProg > 41) {
+        while (quantProg < 1 || quantProg > 40) {
             System.out.println("digite um valor entre 1 e 40");
             quantProg = Integer.parseInt(input.nextLine());
         }
@@ -20,7 +20,7 @@ public class Prova3Ex1 {
 
         System.out.print("Digite quantos Alunos estão Matriculados em Matematica Discreta: ");
         quantMat = Integer.parseInt(input.nextLine());
-        if (quantMat < 0 || quantMat > 41) {
+        while (quantMat < 1 || quantMat > 40) {
             System.out.println("digite um valor entre 1 e 40");
             quantMat = Integer.parseInt(input.nextLine());
         }
@@ -40,13 +40,14 @@ public class Prova3Ex1 {
     public static void verificarNomes(String[] prog, String[] mat, int n1, int n2) {
         String[] alunosApenasProg = new String[n1];
         int soProg = 0;
-        boolean apenasProg = true;
+        boolean apenasProg;
 
         for (int i = 0; i < n1; i++) {
             apenasProg = true;
             for (int j = 0; j < n2; j++) {
                 if (prog[i].equalsIgnoreCase(mat[j])) {
                     apenasProg = false;
+                    break;
                 }
             }
 
